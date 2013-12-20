@@ -1,7 +1,7 @@
 servo-ui
 ========
 
-Simple desktop application for controlling servos. 
+Simple desktop application for controlling servos, built with node-webkit.
 
 Currently only supports pololu servo controllers and a PS3 controller.
 
@@ -12,10 +12,22 @@ Currently only supports pololu servo controllers and a PS3 controller.
 ```
 $ npm install
 $ bower install
-
-cd node_modules/pololu-maestro/node_modules/serialport && nw-gyp rebuild --target=0.8.2
-cd node_modules/node-hid && nw-gyp rebuild --target=0.8.2
 ```
 
-Node modules with native dependencies have to be rebuilt using nw-gyp.
+Node modules with native dependencies have to be rebuilt using nw-gyp. 
+
+In these directories:
+
+```
+node_modules/pololu-maestro/node_modules/serialport
+node_modules/node-hid
+```
+
+do:
+
+```
+nw-gyp rebuild --target=0.8.2
+```
+
+
 
