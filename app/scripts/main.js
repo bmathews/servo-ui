@@ -58,12 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
       selectedChannel = 0;
 
   ps3.on('throttle', function (throttle) {
-    console.log(throttle);
     channels[selectedChannel].value += Math.round(throttle);
   });
 
   ps3.on('keypress', function (key) {
-    console.log(key);
     if (key === ps3.keys.triggers.UP) {
       selectedChannel = (selectedChannel + 1) % channels.length;
     } else if ( key === ps3.keys.triggers.DOWN) {
