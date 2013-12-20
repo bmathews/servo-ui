@@ -5,6 +5,10 @@
     "pololu-maestro": "~2.1.2",
     "node-hid": "~0.3.1"
   },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-node-webkit-builder": "~0.1.6"
+  },
   "main": "app/index.html",
   "window": {
     "toolbar": true,
