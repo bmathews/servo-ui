@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "platform": "Polymer/platform#~0.1.1",
-    "polymer": "Polymer/polymer#~0.1.1"
+    "polymer": "Polymer/polymer#~0.1.1",
+    "polymer-selector": "Polymer/polymer-selector#~0.1.1"
   }
 }
