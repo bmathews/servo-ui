@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   ps3.read();
 
-  gui.Window.get().on('close', function() {
+  require('nw.gui').Window.get().on('close', function() {
     ps3.close();
   });
 

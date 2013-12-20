@@ -53,7 +53,9 @@ module.exports = function () {
   };
 
   PS3.prototype.close = function () {
-    controller.close();
+    if (controller) {
+      controller.close();
+    }
   };
 
   PS3.prototype.read = function () {
