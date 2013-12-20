@@ -1,11 +1,25 @@
 :host {
   margin: 30px;
+  font-size: 20px;
+}
+
+:host.polymer-selected {
+  color: #fff;
+}
+
+:host.polymer-selected input[type="range"] {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15) inset, 0 0px 1px rgba(0, 0, 0, 0.1) inset, 0px 2px 0px 0px rgba(255,255,255,.1), 0px 0px 3px 0px rgba(0,0,0,1), 0px 0px 10px #4989d8;
+}
+
+:host.polymer-selected input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.15), 0px 0px 10px #4989d8;
 }
 input[type="range"] {
   transform: rotate(0deg);
   border-radius: 8px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15) inset, 0 0px 1px rgba(0, 0, 0, 0.1) inset, 0px 2px 0px 0px rgba(255,255,255,.1), 0px 0px 3px 0px rgba(0,0,0,1);
   position: relative;
+  top:2px;
   width: 250px;
   height: 16px;
   padding: 0;

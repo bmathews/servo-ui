@@ -3,15 +3,22 @@
     <meta charset="utf-8">
     <title>Servo-UI</title>
     <link rel="stylesheet" href="styles/main.css">
+
     <link rel="import" href="elements/channel.html">
+
+    <link rel="import" href="bower_components/polymer-selector/polymer-selector.html">
+
     <script src="scripts/main.js"></script>
     <script src="bower_components/platform/platform.js"></script>
+    
   </head>
   <body>
     <div style="width: 450px; margin: auto auto;">
-      <template id="tplChannelList" repeat="{{ channels }}">
-        <my-channel style="display: block;" channelId="{{id}}" min="{{min}}" max="{{max}}" value="{{value}}" name="{{name}}"></my-channel>
-      </template>
+      <polymer-selector activateEvent="mousedown" id="listSelector" selected="1">
+        <template id="tplChannelList" repeat="{{ channels }}">
+          <my-channel style="display: block;" channelId="{{id}}" min="{{min}}" max="{{max}}" value="{{value}}" name="{{name}}"></my-channel>
+        </template>
+      <polymer-selector selected="0">
     </div>
   </body>
 </html>

@@ -2,4 +2,6 @@ body {
   font-family: "Open Sans";
   background: #41464d;
   color: #c3b7b0;
+  padding: 0;
+  margin: 0;
 }

@@ -3,7 +3,7 @@
 <polymer-element name="my-channel" attributes="min max value channelId name change">
   <template>
     <link href="channel.css" rel="stylesheet">
-    {{channelId}}: {{ name }} <input type="range" min="{{min}}" max="{{max}}" value="{{value}}"/> {{value}}
+    {{channelId}}: {{ name }} <input type="range" min="{{min}}" max="{{max}}" value="{{value}}"/> <strong>{{value}}</strong>
   </template>
   <script>
     Polymer("my-channel", {
