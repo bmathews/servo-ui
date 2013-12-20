@@ -20,7 +20,7 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   background: -webkit-linear-gradient(left, #efefef, #fafafa);
   border-radius: 64px;
-  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1), 1px 0 1px rgba(0, 0, 0, 0.5) inset, 0 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.15);
   position: relative;
   -webkit-appearance: none !important;
   width: 64px;
@@ -37,20 +37,18 @@ input[type="range"]::-webkit-slider-thumb:after {
 /*Range - Thumb - Overlay*/
 input[type="range"]::-webkit-slider-thumb:before {
   background: -webkit-linear-gradient(left, #ffffff 0%, #efefef 75%);
-  -webkit-border-radius: 16px;
   border-radius: 16px;
-  border-right: 2px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) inset;
-  margin: 5px 0 0 3.2px;
-  width: 53.6px;
-  height: 26.9px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+  margin: 4px 0 0 5px;
+  width: 54px;
+  height: 32px;
 }
 /*Range - Thumb - Grip*/
 input[type="range"]::-webkit-slider-thumb:after {
   background: -webkit-linear-gradient(left, transparent 5px, rgba(0, 0, 0, 0.15) 5px, transparent 6px, transparent 10px, rgba(0, 0, 0, 0.15) 11px, transparent 11px);
   right: 50%;
   left: 50%;
-  margin: 11.42857px 0 0 -8px;
+  margin: 12px 0 0 -9px;
   width: 16px;
   height: 16px;
   border-left: 1px solid rgba(0, 0, 0, 0.15);
