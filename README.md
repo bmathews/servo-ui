@@ -5,13 +5,13 @@ Simple desktop application for controlling servos, built with node-webkit.
 
 Currently only supports pololu servo controllers and a PS3 controller.
 
-![image](https://f.cloud.github.com/assets/848347/1793995/c3c8dd4c-69be-11e3-8f93-9d0962688af6.png)
+![image](https://f.cloud.github.com/assets/848347/1794518/ffdd26d6-69cc-11e3-9967-2f82bdf9a3ae.png)
 
 
 ### Install
 ```
-$ npm install
-$ bower install
+npm install
+bower install
 ```
 
 Node modules with native dependencies have to be rebuilt using nw-gyp. 
@@ -29,5 +29,11 @@ do:
 nw-gyp rebuild --target=0.8.2
 ```
 
+### Run
+See https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps
 
+### Release
+```
+grunt
+```
 
