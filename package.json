@@ -1,0 +1,16 @@
+{
+  "name": "servo-ui",
+  "version": "0.0.1",
+  "dependencies": {
+    "pololu-maestro": "~2.1.2",
+    "node-hid": "~0.3.1"
+  },
+  "main": "app/index.html",
+  "window": {
+    "toolbar": true,
+    "frame": true,
+    "width": 600,
+    "height": 400
+  },
+  "js-flags": "--harmony"
+}

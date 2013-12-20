@@ -1,0 +1,21 @@
+{
+  "name": "servo-ui",
+  "version": "0.0.0",
+  "homepage": "https://github.com/moonsspoon/servo-ui",
+  "authors": [
+    "Brian Mathews <spoonart@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "platform": "Polymer/platform#~0.1.1",
+    "polymer": "Polymer/polymer#~0.1.1"
+  }
+}

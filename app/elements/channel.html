@@ -1,0 +1,17 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="my-channel" attributes="min max value channelId name change">
+  <template>
+    <link href="channel.css" rel="stylesheet">
+    {{channelId}}: {{ name }} <input type="range" min="{{min}}" max="{{max}}" value="{{value}}"/> {{value}}
+  </template>
+  <script>
+    Polymer("my-channel", {
+      valueChanged: function () {
+        this.fire('change', { id: this.channelId, value: this.value });
+        var bgOffset = (((this.value - this.min) * (this.webkitShadowRoot.children[1].offsetWidth - 0)) / (this.max - this.min)) + 0;
+        this.webkitShadowRoot.children[1].style.backgroundImage = "-webkit-linear-gradient(left, #4989d8 0px, #3069ab " + bgOffset+"px, rgba(0,0,0,.25) " + bgOffset+"px, rgba(0,0,0,.25) 16px)";
+      }
+    });
+  </script>
+</polymer-element>
