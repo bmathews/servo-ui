@@ -58,25 +58,27 @@ module.exports = function () {
 
   PS3.prototype.read = function () {
     var _this = this;
-    controller.read(function(err, data) {
+    if (controller) {
+      controller.read(function(err, data) {
 
-      [_this.keys.triggers.UP, _this.keys.triggers.DOWN].forEach(function (key) {
-        if (data[key] > 0) {
-          if (!_this.keysDown[key]) {
-            _this.keypress(key);
+        [_this.keys.triggers.UP, _this.keys.triggers.DOWN].forEach(function (key) {
+          if (data[key] > 0) {
+            if (!_this.keysDown[key]) {
+              _this.keypress(key);
+            }
+            _this.keysDown[key] = true;
+          } else {
+            _this.keysDown[key] = false;
           }
-          _this.keysDown[key] = true;
-        } else {
-          _this.keysDown[key] = false;
-        }
+        });
+
+        _this.throttle(data[_this.keys.triggers.RIGHT_STICK_Y]);
+
+        setTimeout(function() {
+          _this.read();
+        }, READ_SPEED);
       });
-
-      _this.throttle(data[_this.keys.triggers.RIGHT_STICK_Y]);
-
-      setTimeout(function() {
-        _this.read();
-      }, READ_SPEED);
-    });
+    }
   };
 
   PS3.prototype.keys = {
