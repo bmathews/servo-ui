@@ -51,14 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('WebComponentsReady', function() {
     Array.prototype.slice.call(document.querySelectorAll('my-channel')).forEach(function (channelEl) {
       channelEl.addEventListener('change', function (e) {
-
+        
         // get the channel by id
         var channel = chIdMap[e.detail.id];
 
-        // validate the min/max
-        if (channel.value < channel.min || channel.value > channel.max) {
-          channel.value = Math.max(channel.min, Math.min(channel.max, channel.value));
-        }
+        channel.value = parseInt(e.detail.value);
 
         // control servo
         maestro.setTarget(channel.id, channel.value);
@@ -78,13 +75,19 @@ document.addEventListener('DOMContentLoaded', function() {
   var ps3 = new PS3();
 
   ps3.on('throttle', function (throttle) {
-    channels[listSelector.selected].value += Math.round(throttle);
+    var channel = channels[listSelector.selected];
+    console.log('throttle from: ' + channel.value);
+    if (channel) {
+      channel.value = Math.max(channel.min, Math.min(channel.max, channel.value + Math.round(throttle)));
+    } else {
+      console.error(listSelector.selected);
+    }
   });
 
   ps3.on('keypress', function (key) {
-    if (key === ps3.keys.triggers.UP) {
+    if (key === ps3.keys.triggers.DOWN) {
       listSelector.selected = (listSelector.selected + 1) % channels.length;
-    } else if ( key === ps3.keys.triggers.DOWN) {
+    } else if ( key === ps3.keys.triggers.UP) {
       listSelector.selected = (listSelector.selected - 1) < 0 ? channels.length - 1 : listSelector.selected - 1;
     }
   });

@@ -16,7 +16,7 @@
     <div style="width: 450px; margin: auto auto;">
       <polymer-selector activateEvent="mousedown" id="listSelector" selected="1">
         <template id="tplChannelList" repeat="{{ channels }}">
-          <my-channel style="display: block;" channelId="{{id}}" min="{{min}}" max="{{max}}" value="{{value}}" name="{{name}}"></my-channel>
+          <my-channel style="display: block;" channelId="{{id}}" min="{{min}}" max="{{max}}" value="{{value}}" display="{{name}}"></my-channel>
         </template>
       <polymer-selector selected="0">
     </div>

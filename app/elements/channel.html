@@ -1,9 +1,9 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="my-channel" attributes="min max value channelId name change">
+<polymer-element name="my-channel" attributes="min max value channelId display change">
   <template>
     <link href="channel.css" rel="stylesheet">
-    {{channelId}}: {{ name }} <input type="range" min="{{min}}" max="{{max}}" value="{{value}}"/> <strong>{{value}}</strong>
+    {{channelId}}: {{ display }} <input type="range" min="{{min}}" max="{{max}}" value="{{value}}"/> <strong>{{value}}</strong>
   </template>
   <script>
     Polymer("my-channel", {

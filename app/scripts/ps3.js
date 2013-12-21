@@ -47,9 +47,8 @@ module.exports = function () {
 
     if (temp < JOYSTICK_THRESHOLD / -2 || temp > JOYSTICK_THRESHOLD / 2) {
       throttle = convertRange(temp, -128, 128, -20, 20);
+      this.emit('throttle', throttle);
     }
-
-    this.emit('throttle', throttle);
   };
 
   PS3.prototype.close = function () {
