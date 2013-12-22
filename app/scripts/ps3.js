@@ -61,6 +61,7 @@ module.exports = function () {
     var _this = this;
     if (controller) {
       controller.read(function(err, data) {
+        if (err) { console.error(err); }
 
         [_this.keys.triggers.UP, _this.keys.triggers.DOWN].forEach(function (key) {
           if (data[key] > 0) {

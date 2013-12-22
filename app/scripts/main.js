@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('WebComponentsReady', function() {
     Array.prototype.slice.call(document.querySelectorAll('my-channel')).forEach(function (channelEl) {
       channelEl.addEventListener('change', function (e) {
-        
+
         // get the channel by id
         var channel = chIdMap[e.detail.id];
 
@@ -76,12 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   ps3.on('throttle', function (throttle) {
     var channel = channels[listSelector.selected];
-    console.log('throttle from: ' + channel.value);
-    if (channel) {
-      channel.value = Math.max(channel.min, Math.min(channel.max, channel.value + Math.round(throttle)));
-    } else {
-      console.error(listSelector.selected);
-    }
+    channel.value = Math.max(channel.min, Math.min(channel.max, channel.value + Math.round(throttle * 2)));
   });
 
   ps3.on('keypress', function (key) {
@@ -95,7 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
   ps3.read();
 
   require('nw.gui').Window.get().on('close', function() {
-    ps3.close();
+    try {
+      ps3.close();
+    } catch (e) { }
     this.close(true);
   });
 
