@@ -28,6 +28,7 @@ do:
 ```
 nw-gyp rebuild --target=0.8.2
 ```
+where 'target' is your node-webkit version. See https://github.com/rogerwang/node-webkit/wiki/Build-native-modules-with-nw-gyp
 
 ### Run
 See https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps
