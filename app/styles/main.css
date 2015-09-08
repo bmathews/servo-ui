@@ -1,7 +1,53 @@
 body {
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Helvetica Neue";
   background: #41464d;
   color: #c3b7b0;
-  padding: 0;
+  padding: 20px;
   margin: 0;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.channel-name {
+  width: 120px;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.channel-value {
+  width: 50px;
+  padding-left: 15px;
+}
+
+.channel-slider {
+  flex: 1;
+  height: 30px;
+  margin: 5px 0;
+}
+
+.handle {
+  width: 60px;
+  height: 30px;
+  border-radius: 60px;
+  background: #efefef;
+  cursor: pointer;
+}
+
+.handle.active {
+  box-shadow: 0 0 2px 3px #407ACE;
+}
+
+.bar {
+  position: relative;
+  border-radius: 20px;
+  background: rgba(0,0,0,.2);
+  top: 10px;
+  height: 10px;
+}
+
+.bar-0 {
+  background: #407ACE;
 }

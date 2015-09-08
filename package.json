@@ -1,20 +1,21 @@
 {
   "name": "servo-ui",
   "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "/Applications/nwjs.app/Contents/MacOS/nwjs ."
+  },
   "dependencies": {
-    "pololu-maestro": "~2.1.2",
-    "node-hid": "~0.3.1"
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "dualshock-controller": "https://github.com/bmathews/node-dualshock-controller.git#electron",
+    "electron-prebuilt": "^0.31.2",
+    "pololu-maestro": "https://github.com/bmathews/node-pololumaestro.git",
+    "react": "^0.13.3",
+    "react-motion": "^0.2.7",
+    "react-slider": "^0.5.1"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-node-webkit-builder": "~0.1.6"
-  },
-  "main": "app/index.html",
-  "window": {
-    "toolbar": true,
-    "frame": true,
-    "width": 600,
-    "height": 400
-  },
-  "js-flags": "--harmony"
+    "electron-rebuild": "^1.0.0"
+  }
 }

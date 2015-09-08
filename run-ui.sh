@@ -1,2 +1,2 @@
 #!/bin/sh
-open -n -a node-webkit ./
+open -n -a nwjs .
